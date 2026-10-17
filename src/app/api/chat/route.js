@@ -48,11 +48,33 @@ export async function POST(req) {
         const timeoutId = setTimeout(() => controller.abort(), 9000); // 9s timeout
 
         let endpoint = customApiUrl;
+        if (endpoint && (endpoint.endsWith('/v1') || endpoint.endsWith('/v1/'))) {
+          endpoint = endpoint.replace(/\/+$/, '') + '/chat/completions';
+        }
+
         let requestHeaders = { 'Content-Type': 'application/json' };
         let requestBody = null;
 
         // Auto-detect or route provider
-        if (apiProvider === 'groq' || (!customApiUrl && apiKey.startsWith('gsk_'))) {
+        const isBharatCode =
+          apiProvider === 'bharatcode' ||
+          apiKey.startsWith('bc_live_') ||
+          (endpoint && endpoint.includes('bharatcode.ai'));
+
+        if (isBharatCode) {
+          endpoint = endpoint || 'https://bharatcode.ai/api/model/v1/chat/completions';
+          requestHeaders['Authorization'] = `Bearer ${apiKey}`;
+          const selectedModel = body.model || process.env.BHARATCODE_MODEL || 'qwen-3.8-27b';
+          requestBody = JSON.stringify({
+            model: selectedModel,
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt },
+            ],
+            temperature: 0.6,
+            max_tokens: 1500,
+          });
+        } else if (apiProvider === 'groq' || (!customApiUrl && apiKey.startsWith('gsk_'))) {
           endpoint = 'https://api.groq.com/openai/v1/chat/completions';
           requestHeaders['Authorization'] = `Bearer ${apiKey}`;
           requestBody = JSON.stringify({
@@ -80,7 +102,7 @@ export async function POST(req) {
             }
           });
         } else {
-          // Standard OpenAI or BharatCode compatible endpoint
+          // Standard OpenAI or compatible endpoint
           endpoint = customApiUrl || 'https://api.openai.com/v1/chat/completions';
           requestHeaders['Authorization'] = `Bearer ${apiKey}`;
           requestBody = JSON.stringify({
@@ -126,8 +148,11 @@ export async function POST(req) {
           }
 
           if (rawText && rawText.trim().length > 0) {
-            return NextResponse.json({ success: true, mode, source: 'ai-external', text: rawText });
+            return NextResponse.json({ success: true, mode, source: isBharatCode ? 'bharatcode-live' : 'ai-external', text: rawText });
           }
+        } else {
+          const errText = await response.text().catch(() => '');
+          console.warn(`External AI provider returned HTTP ${response.status}. Payload: ${errText.slice(0, 200)}`);
         }
       } catch (err) {
         console.warn('External AI call failed or timed out. Activating StudyStreak Tactical Knowledge Engine:', err.message);
