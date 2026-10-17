@@ -1,0 +1,20 @@
+Project Name: StudyStreak
+Tagline: Tactical AI Study Companion for Competitive Exam Aspirants (JEE, NEET, UPSC, GATE, CAT, SSC, Banking)
+Built for: BharatCode Hackathon
+Official Platform: https://bharatcode.ai
+Live Models Integrated:
+- qwen-3.8-27b (Qwen 3.8 27B)
+- deepseek-v4.1-flash (BharatCode DeepSeek V4.1 Flash)
+API Base URL: https://bharatcode.ai/api/model/v1
+Chat Completions Endpoint: https://bharatcode.ai/api/model/v1/chat/completions
+
+Features:
+- Socratic Doubt Clearing with Step-by-Step Derivations and Examiner Traps
+- Adaptive 5-MCQ Quiz Me Engine with Weak Topics Radar
+- Daily Streak & Study-Hour Telemetry with Real-Time Exam Countdown
+- Curated High-Yield Resource Hub (Revision Notes, Formulas, Past Trends)
+- 100% Privacy: Zero Login, Zero Database (Pure Browser LocalStorage)
+
+GitHub Repository: https://github.com/yogeshbamane16/studystreak
+Developer: yogeshbamane16
+Status: Production Ready
