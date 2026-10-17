@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Ballistic Tactical Dark Surface */
+html, body {
+  background-color: #0b0f11 !important;
+  color: #e0e3e5 !important;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Glowing Phosphor accents */
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.25);
+}
+
+.glow-emerald-strong {
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.45);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(76, 215, 246, 0.25);
+}
+
+/* Large tap target enforcement for mobile accessibility */
+.tap-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Safe area padding for iOS and modern mobile home bars */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}

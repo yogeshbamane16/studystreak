@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary":"#003640","surface-tint":"#00e55b","tertiary":"#fff9f6","on-tertiary-container":"#895600","inverse-on-surface":"#2d3133","on-primary-container":"#007128","tertiary-fixed-dim":"#ffb95f","surface-dim":"#101416","surface-container-highest":"#313538","on-primary-fixed-variant":"#00531b","on-error":"#690005","on-surface":"#e0e3e5","on-background":"#e0e3e5","on-primary":"#003911","on-secondary-fixed":"#001f26","error":"#ffb4ab","on-tertiary-fixed-variant":"#653e00","inverse-surface":"#e0e3e5","secondary-fixed":"#acedff","primary-fixed-dim":"#00e55b","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#004e5c","tertiary-container":"#ffd7aa","background":"#101416","on-surface-variant":"#b9ccb5","outline-variant":"#3b4b3a","error-container":"#93000a","surface-bright":"#363a3c","surface-variant":"#313538","primary":"#edffe8","surface-container":"#1c2022","on-tertiary-fixed":"#2a1700","secondary-container":"#03b5d3","outline":"#849581","secondary":"#4cd7f6","primary-container":"#00ff66","surface-container-high":"#262b2d","surface":"#101416","surface-container-low":"#181c1e","secondary-fixed-dim":"#4cd7f6","surface-container-lowest":"#0b0f11","tertiary-fixed":"#ffddb8","on-primary-fixed":"#002107","inverse-primary":"#006e27","on-secondary-container":"#00424e","on-tertiary":"#472a00","primary-fixed":"#6bff83"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"0.5rem","margin-mobile":"0.75rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"0.75rem","space-lg":"1.25rem","margin":"1.25rem","space-xl":"2rem"},"fontFamily":{"body-md":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"body-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"title-sm":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"body-md":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"44px","letterSpacing":"0.06em","fontWeight":"700"}],"body-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg":["30px",{"lineHeight":"36px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"32px","letterSpacing":"0.05em","fontWeight":"700"}],"label-sm":["9px",{"lineHeight":"10px","letterSpacing":"0.15em","fontWeight":"700"}],"label-lg":["12px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"600"}],"body-lg":["14px",{"lineHeight":"22px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["10px",{"lineHeight":"12px","letterSpacing":"0.12em","fontWeight":"600"}],"title-sm":["15px",{"lineHeight":"20px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="flex flex-col"><div class="px-space-md py-space-md bg-surface-container-low"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">SYS.SECTOR // 01</span><span class="font-label-sm text-label-sm text-primary-container">[ARMED]</span></div><div class="mt-space-xs font-title-sm text-title-sm text-primary tracking-wider uppercase flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">military_tech</span>COMMAND MATRIX</div></div><div class="px-space-md py-space-sm bg-surface-container-lowest"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">NAVIGATION TELEMETRY</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-md"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-headline-md" data-path="mission-control" href="#"><span class="font-label-lg text-label-lg uppercase tracking-wide">[01 // MISSION CONTROL]</span><span class="font-label-sm text-label-sm text-outline">TGT.01</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tactical-ai-tutor" href="#"><span class="font-label-lg text-label-lg uppercase tracking-wide">[02 // TACTICAL AI TUTOR]</span><span class="font-label-sm text-label-sm text-outline">PYQ.ENG</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="daily-sortie-planner" href="#"><span class="font-label-lg text-label-lg uppercase tracking-wide">[03 // DAILY SORTIE PLANNER]</span><span class="font-label-sm text-label-sm text-outline">RADAR</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="telemetry-streak" href="#"><span class="font-label-lg text-label-lg uppercase tracking-wide">[04 // TELEMETRY &amp; STREAK]</span><span class="font-label-sm text-label-sm text-outline">VEL.LOG</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-sm bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">DIAGNOSTIC STATUS</span><span class="font-label-sm text-label-sm text-primary-container">99.98% OK</span></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-primary-container h-1 w-4/5"></div></div><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>RADAR LATENCY</span><span class="text-secondary">24MS</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-title-sm text-title-sm text-primary tracking-widest uppercase">SENTINEL // STUDYSTREAK OPS</span><div class="flex items-center gap-space-xs"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-primary-container tracking-wider uppercase">DEFCON 1 // EXAM READINESS</span></div></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-space-xs bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">T-MINUS 48D 14H 22M</span><span class="px-space-sm py-space-xs bg-surface-container-low text-primary-container font-label-sm text-label-sm uppercase">STREAK: 14-DAY LOCK</span><span class="px-space-sm py-space-xs bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase">LATENCY: 24ms BHARATCODE</span><span class="px-space-sm py-space-xs bg-surface-container-low text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase">TARGET: IIT BOMBAY CSE</span></div></div><div class="flex items-center gap-space-sm"><button class="px-space-sm py-space-xs bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-bright hover:text-on-surface transition-colors flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm">bolt</span><span>RAPID COMBAT DRILL</span></button><button class="px-space-sm py-space-xs bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container-highest hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm align-middle">tune</span></button><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col"><span class="font-label-sm text-label-sm text-on-surface uppercase">OP. ARJUN</span><span class="font-label-sm text-label-sm text-secondary uppercase">AIR TIER 1</span></div></div></div></header><main class="flex-1 pt-16 w-full px-space-lg bg-surface"><div class="flex flex-col w-full pb-space-xl">
+<!-- HUD AMBIENT TARGET ACQUISITION GRID (SUBTLE TECH RETICLE) -->
+<div class="relative w-full overflow-hidden mb-space-lg">
+<!-- SCANLINE DECORATIVE TICK TAPE -->
+<div class="w-full bg-surface-container-lowest flex items-center justify-between px-space-md py-space-xs mb-space-sm text-outline-variant select-none">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest">[SDR.LOCK: ACTIVE]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider">SEC: 28.6139°N 77.2090°E // BHARAT_NODE_01</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider">BANDWIDTH: 1.2 GBPS MESH</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>FPS: 120.0</span>
+<span class="text-primary-container">■ ■ ■ ■ ■ ■ ■</span>
+<span>ACQUISITION: 100%</span>
+</div>
+</div>
+<!-- 1. TOP COMMAND HERO -->
+<div class="relative bg-surface-container-lowest p-space-lg shadow-xl overflow-hidden">
+<!-- HUD CORNER ACCENTS VIA SVGS -->
+<div class="absolute top-0 left-0 w-8 h-8 pointer-events-none">
+<svg class="w-full h-full text-primary-container" fill="none" viewbox="0 0 32 32">
+<path d="M0 8V0H8" stroke="currentColor" stroke-width="2"></path>
+<line stroke="currentColor" stroke-width="1" x1="2" x2="6" y1="2" y2="6"></line>
+</svg>
+</div>
+<div class="absolute top-0 right-0 w-8 h-8 pointer-events-none">
+<svg class="w-full h-full text-primary-container" fill="none" viewbox="0 0 32 32">
+<path d="M32 8V0H24" stroke="currentColor" stroke-width="2"></path>
+<line stroke="currentColor" stroke-width="1" x1="30" x2="26" y1="2" y2="6"></line>
+</svg>
+</div>
+<div class="absolute bottom-0 left-0 w-8 h-8 pointer-events-none">
+<svg class="w-full h-full text-primary-container" fill="none" viewbox="0 0 32 32">
+<path d="M0 24V32H8" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<div class="absolute bottom-0 right-0 w-8 h-8 pointer-events-none">
+<svg class="w-full h-full text-primary-container" fill="none" viewbox="0 0 32 32">
+<path d="M32 24V32H24" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col max-w-4xl">
+<!-- STATUS CHIP -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low w-fit mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase">[STATUS: OPERATIONAL COMBAT READINESS // TARGET EXAM: JEE ADVANCED 2025]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">// AIR-GAP ID: SN-8829-BK</span>
+</div>
+<!-- PRIMARY GLITCH/TACTICAL HEADLINE -->
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase tracking-tight flex flex-wrap items-baseline gap-space-sm">
+<span>OPERATION RANK LOCK:</span>
+<span class="text-primary-container drop-shadow-[0_0_12px_rgba(0,255,102,0.6)]">T-MINUS 48 DAYS</span>
+</h1>
+<p class="mt-space-xs font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+            Tactical exam readiness engine powered by <span class="text-secondary font-label-md">BharatCode AI</span>. 5-MCQ precision air-strikes on weak diagnostic targets, automated daily sortie scheduling, zero credential leak with 100% encrypted browser sandboxing.
+          </p>
+<!-- TACTICAL TELEMETRY CHIPS ROW -->
+<div class="mt-space-md flex flex-wrap items-center gap-space-xs">
+<div class="px-space-sm py-space-xs bg-surface-container-high flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-primary-container">radar</span>
+<span>CALCULUS READINESS: 78% [SURGICAL]</span>
+</div>
+<div class="px-space-sm py-space-xs bg-surface-container-high flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary">crisis_alert</span>
+<span>ROTATIONAL DYNAMICS: LEVEL-3 HAZARD</span>
+</div>
+<div class="px-space-sm py-space-xs bg-surface-container-high flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed-dim">shield</span>
+<span>DEFENSE MATRIX: AIR-GAPPED</span>
+</div>
+</div>
+</div>
+<!-- ACTIONS & QUICK COMBAT DRILL TRIGGER -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-sm min-w-[260px] self-start lg:self-center">
+<button class="px-space-lg py-space-md bg-primary-container text-on-primary-container font-headline-md text-headline-md tracking-wider uppercase transition-all flex items-center justify-center gap-space-sm shadow-[0_0_20px_rgba(0,255,102,0.35)] hover:shadow-[0_0_30px_rgba(0,255,102,0.65)] hover:bg-surface-bright hover:text-on-surface active:scale-95" id="btnInitiateSortie">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+<span>INITIATE COMBAT SORTIE</span>
+</button>
+<button class="px-space-lg py-space-sm bg-surface-container text-secondary font-label-lg text-label-lg tracking-wider uppercase hover:bg-surface-container-high hover:text-primary transition-all flex items-center justify-center gap-space-xs active:scale-95" id="btnSystemCalib">
+<span class="material-symbols-outlined text-base">center_focus_strong</span>
+<span>EXECUTE CALIBRATION</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. TACTICAL TARGET MATRIX & EXAM CALIBRATION DOCK -->
+<section class="mb-space-lg bg-surface-container-lowest p-space-md shadow-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- TARGET SELECTOR TABS -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-xs text-primary-container">flag</span>
+          THEATRE SELECTION MATRIX // STRATEGIC THEATRES
+        </span>
+<div class="flex flex-wrap items-center gap-space-xs" id="theatreTabs">
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase flex items-center gap-space-xs shadow-[0_0_10px_rgba(0,255,102,0.3)]">
+<span class="w-1.5 h-1.5 bg-on-primary-container rounded-full"></span>
+<span>JEE ADV // PRIORITY 1 [ACTIVE]</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-outline rounded-full"></span>
+<span>NEET-UG // RECON</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-outline rounded-full"></span>
+<span>GATE CS // STANDBY</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-outline rounded-full"></span>
+<span>UPSC CSE // STRAT</span>
+</button>
+</div>
+</div>
+<!-- TARGET COORDINATES TELEMETRY BAR -->
+<div class="bg-surface-container-low p-space-sm flex flex-wrap items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">OFFICIAL LAUNCH D-DAY</span>
+<span class="font-headline-md text-headline-md text-primary tracking-wider">2025-05-25</span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest hidden sm:block"></div>
+<div class="flex flex-col min-w-[200px]">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">DAILY SORTIE QUOTA</span>
+<span class="font-label-sm text-label-sm text-primary-container">4.8 / 6.0 HRS (80%)</span>
+</div>
+<!-- PROGRESS TICK STRIP -->
+<div class="w-full bg-surface-container-highest h-2 flex gap-0.5">
+<div class="h-full bg-primary-container w-[80%]"></div>
+<div class="h-full bg-surface-container-highest w-[20%]"></div>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">security</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">STREAK SHIELD</span>
+<span class="font-label-sm text-label-sm text-on-surface">1 UNIT EQUIPPED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. RADAR & TACTICAL WEAK SPOT INTEL (3-COLUMN HUD INSTRUMENT PODS) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<!-- COL 1: THREAT RADAR / WEAK SPOT INTEL (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex flex-col">
+<!-- HEADER STRIP -->
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-base">emergency</span>
+<span class="font-title-sm text-title-sm text-primary uppercase">RADAR // WEAK SPOT INTEL</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-error-container text-on-error-container uppercase">3 THREATS IDENTIFIED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous algorithmic diagnostic pinpointing precision knowledge degradation across syllabus vectors.
+        </p>
+<!-- WEAK SPOT ITEM 1: CRITICAL -->
+<div class="bg-surface-container-low p-space-sm mb-space-xs transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">Rotational Dynamics</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs bg-error text-on-error uppercase font-bold">CRITICAL // 42%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
+<span>Subject: Physics // PYQ Vector: 2018-2024</span>
+<span class="text-error font-mono">Δ -14% vs Cohort</span>
+</div>
+<!-- ACCURACY METER -->
+<div class="w-full bg-surface-container-highest h-1.5 mb-space-sm overflow-hidden flex">
+<div class="bg-error h-full" style="width: 42%;"></div>
+<div class="bg-surface-container-high h-full" style="width: 58%;"></div>
+</div>
+<button class="w-full py-space-xs bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-xs">gps_fixed</span>
+<span>DEPLOY 5-MCQ INTERCEPT DRILL</span>
+</button>
+</div>
+<!-- WEAK SPOT ITEM 2: ELEVATED -->
+<div class="bg-surface-container-low p-space-sm mb-space-xs transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">Organic Mechanisms</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs bg-tertiary-fixed-dim text-on-tertiary-container uppercase font-bold">ELEVATED // 38%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
+<span>Subject: Chemistry // Carbonyls &amp; Electrophilic</span>
+<span class="text-tertiary-fixed-dim font-mono">STEEP DROP</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 mb-space-sm overflow-hidden flex">
+<div class="bg-tertiary-fixed-dim h-full" style="width: 38%;"></div>
+<div class="bg-surface-container-high h-full" style="width: 62%;"></div>
+</div>
+<button class="w-full py-space-xs bg-surface-container-high text-primary hover:bg-tertiary-fixed-dim hover:text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-xs">bolt</span>
+<span>DEPLOY MECHANISM REACTION SPRINT</span>
+</button>
+</div>
+<!-- WEAK SPOT ITEM 3: STABLE/HIGH -->
+<div class="bg-surface-container-low p-space-sm transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">Integral Calculus</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs bg-primary-container text-on-primary-container uppercase font-bold">HIGH // 78%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
+<span>Subject: Mathematics // Leibnitz &amp; Area Bound</span>
+<span class="text-primary-container font-mono">+12% Surplus</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 mb-space-sm overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 78%;"></div>
+<div class="bg-surface-container-high h-full" style="width: 22%;"></div>
+</div>
+<button class="w-full py-space-xs bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-xs">insights</span>
+<span>SCHEDULE ADVANCED RECON DRILL</span>
+</button>
+</div>
+</div>
+<!-- RADAR FOOTER TICK -->
+<div class="mt-space-md pt-space-xs bg-surface-container-low px-space-sm py-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>RADAR ENGINE: BHARAT-TACTICAL-V2</span>
+<span class="text-primary-container">SYS: OPTIMAL</span>
+</div>
+</div>
+<!-- COL 2: ACTIVE COMBAT SORTIES (MISSION ROSTER) (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-md">
+<div>
+<!-- HEADER STRIP -->
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">flight_takeoff</span>
+<span class="font-title-sm text-title-sm text-primary uppercase">TODAY'S MISSION SORTIES</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-high text-secondary uppercase font-semibold">DAILY QUOTA: 3 TASKS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Mission-critical daily strikes calibrated automatically for peak memory consolidation and neural recall.
+        </p>
+<!-- SORTIE 01 - ACTIVE IN PROGRESS -->
+<div class="p-space-sm mb-space-xs bg-surface-container-high transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary-container tracking-wider font-bold">[SORTIE 01 // COMBAT ACTIVE]</span>
+<span class="font-label-sm text-label-sm px-space-xs bg-primary-container text-on-primary-container animate-pulse">22:15 REMAINING</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase font-bold mb-space-xs">15 PYQs on Rotational Inertia</h4>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+<span>Duration: 45 MIN // Target: Error elimination</span>
+<span class="text-secondary font-mono">08/15 Solved</span>
+</div>
+<!-- MINI TIMER PROGRESS BAR -->
+<div class="w-full bg-surface-container-lowest h-1.5 mb-space-xs overflow-hidden">
+<div class="bg-primary-container h-full w-[54%]"></div>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<button class="px-space-sm py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+              RESUME COCKPIT
+            </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">TARGET: JEE ADV '22</span>
+</div>
+</div>
+<!-- SORTIE 02 - PENDING -->
+<div class="p-space-sm mb-space-xs bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider font-bold">[SORTIE 02 // STAGED]</span>
+<span class="font-label-sm text-label-sm px-space-xs bg-surface-container-highest text-on-surface-variant">PENDING</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase font-bold mb-space-xs">Aldehydes &amp; Ketones Mechanism Sprint</h4>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
+<span>Duration: 40 MIN // Synthesis Super-drills</span>
+<span class="text-outline font-mono">0/12 Solved</span>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<button class="px-space-sm py-1 bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">timer</span>
+              ENGAGE SORTIE
+            </button>
+<span class="font-label-sm text-label-sm text-outline uppercase">COHORT DIFFICULTY: 8.8/10</span>
+</div>
+</div>
+<!-- SORTIE 03 - STANDBY -->
+<div class="p-space-sm bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider font-bold">[SORTIE 03 // STANDBY]</span>
+<span class="font-label-sm text-label-sm px-space-xs bg-surface-container-highest text-outline">RESERVE</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase font-bold mb-space-xs">Definite Integrals Superposition Set</h4>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
+<span>Duration: 60 MIN // JEE ADV Special Mock</span>
+<span class="text-outline font-mono">T-4 HRS</span>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<button class="px-space-sm py-1 bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock_clock</span>
+              QUEUED
+            </button>
+<span class="font-label-sm text-label-sm text-outline uppercase">SLOT: NIGHT COMBAT</span>
+</div>
+</div>
+</div>
+<!-- ADD CUSTOM SORTIE ACTION -->
+<button class="w-full mt-space-md py-space-sm bg-surface-container-high text-primary hover:bg-surface-bright hover:text-primary-container font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-space-xs transition-all">
+<span class="material-symbols-outlined text-sm">add_box</span>
+<span>+ LOG CUSTOM SORTIE MISSION</span>
+</button>
+</div>
+<!-- COL 3: MOMENTUM TELEMETRY & STREAK SHIELD (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md flex flex-col justify-between shadow-md">
+<div>
+<!-- HEADER STRIP -->
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-base">local_fire_department</span>
+<span class="font-title-sm text-title-sm text-primary uppercase">TELEMETRY // MOMENTUM LOCK</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-high text-primary-container uppercase font-semibold">RANK LOCK TIER-1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous operational momentum metrics. Every uninterrupted study day elevates ranking probability by +4.2%.
+        </p>
+<!-- STREAK RADAR VISUALIZATION DOCK -->
+<div class="bg-surface-container-low p-space-md flex flex-col items-center justify-center text-center relative overflow-hidden mb-space-sm">
+<!-- SUBTLE RADAR BACKGROUND RINGS SVG -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+<svg class="w-48 h-48 text-primary-container" fill="none" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="45" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.75"></circle>
+<circle cx="50" cy="50" r="32" stroke="currentColor" stroke-width="0.75"></circle>
+<circle cx="50" cy="50" r="18" stroke="currentColor" stroke-width="0.5"></circle>
+<line stroke="currentColor" stroke-width="0.5" x1="50" x2="50" y1="0" y2="100"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="0" x2="100" y1="50" y2="50"></line>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">CURRENT OPERATIONAL LOCK</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary-container drop-shadow-[0_0_15px_rgba(0,255,102,0.5)]">14</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">DAYS ACTIVE</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">PERCENTILE: TOP 5% OF IIT-B ASPIRANTS</span>
+</div>
+<!-- 14-DAY CALENDAR MATRIX TELEMETRY BLIPS -->
+<div class="grid grid-cols-7 gap-1.5 mt-space-md w-full max-w-[240px] z-10">
+<!-- 14 Active Dots -->
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 1: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 2: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 3: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 4: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 5: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 6: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 7: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 8: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 9: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 10: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 11: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 12: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)]" title="Day 13: Complete"></div>
+<div class="h-3 bg-primary-container shadow-[0_0_5px_rgba(0,255,102,0.8)] animate-pulse" title="Day 14: Current Day Locked"></div>
+</div>
+<div class="flex justify-between w-full max-w-[240px] text-outline font-label-sm text-label-sm mt-1 z-10">
+<span>D-14</span>
+<span>TODAY (LOCKED)</span>
+</div>
+</div>
+<!-- ARMOR & DEFENSE INTEGRITY -->
+<div class="space-y-space-xs">
+<div class="bg-surface-container-low p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">shield_with_heart</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase">STREAK FREEZE ARMOR</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prevents burn if 1 mission skipped</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-secondary uppercase font-bold">1 CHARGE</span>
+</div>
+<div class="bg-surface-container-low p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-base">enhanced_encryption</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase">LOCALSTORAGE AIR-GAP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero cloud leak of study habits</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs bg-surface-container text-primary-container font-mono font-bold">ARMED</span>
+</div>
+</div>
+</div>
+<!-- COHORT DRIFT ACCELERATOR -->
+<div class="mt-space-md pt-space-xs bg-surface-container-high p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface uppercase">PROBABILITY OF UNDER-500 AIR:</span>
+<span class="font-label-lg text-label-lg text-primary-container font-bold">89.4%</span>
+</div>
+</div>
+</div>
+<!-- 4. VISUAL TACTICAL DRILL BENCH & TELEMETRY FOOTER -->
+<section class="bg-surface-container-lowest p-space-md shadow-lg">
+<!-- SUBHEADER / LIVE HUD TELEMETRY METRICS -->
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-md mb-space-md pb-space-md bg-surface-container-low p-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 bg-primary-container animate-ping rounded-full"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold tracking-wide">BHARAT TACTICAL OPERATOR NETWORK</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">REAL-TIME SENTINEL FLEET TELEMETRY</span>
+</div>
+</div>
+<!-- THREE GLOBAL METRICS CHIPS -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ACTIVE OPERATORS ONLINE</span>
+<span class="font-headline-md text-headline-md text-primary font-mono tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary-container">groups</span>
+            18,429
+          </span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest hidden sm:block"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">TACTICAL MCQs SOLVED TODAY</span>
+<span class="font-headline-md text-headline-md text-secondary font-mono tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">psychology</span>
+            1,248,930
+          </span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest hidden sm:block"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">COHORT READINESS BENCHMARK</span>
+<span class="font-headline-md text-headline-md text-primary-container font-mono tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary-container">verified</span>
+            99.4%ile
+          </span>
+</div>
+</div>
+</div>
+<!-- RECON VISUALIZATION TILES -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- TILE 1: TACTICAL FLIGHT SIMULATOR PYQ DRILL -->
+<div class="bg-surface-container-low p-space-sm flex flex-col justify-between">
+<div class="relative w-full h-32 mb-space-xs overflow-hidden">
+<div class="bg-cover bg-center w-full h-full filter saturate-150 brightness-75" data-alt="Tactical jet cockpit military flight heads up display HUD glowing green neon vector telemetry wireframe interface night dark combat view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAS-maNqYyFS7irQvroJIa4f15qNINY9uydWzBoXnpOMxyOhdNhKfyggpX6TUdJbYO31iAPbdci4SiYTQbYj1sl5ZppTfsKKxqJnv3FgL5s7O6Qu7SQfmIux70WsNte7v2nbAz2tLK4fr8mNb3PiFgsXZiBxRj1bPkUTo5XKgSdx66AEA3NZeqPpvOP5qsnYqWT2T2WpTvkwGOofd0qfV_wA6Y3YE9asbhmlfdRym1atKIYIJLx5geB')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest text-primary-container font-label-sm text-label-sm uppercase">
+            SIMULATION // JEE 2024 V-04
+          </div>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">ROTATIONAL GYROSCOPE DRILL</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Multi-variable angular momentum tensor breakdown for target rank under 500.</p>
+</div>
+<button class="mt-space-sm w-full py-1 bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm uppercase transition-all">
+          ENGAGE SIMULATOR
+        </button>
+</div>
+<!-- TILE 2: ORGANIC CHEMICAL CHAIN REACTION INTERCEPT -->
+<div class="bg-surface-container-low p-space-sm flex flex-col justify-between">
+<div class="relative w-full h-32 mb-space-xs overflow-hidden">
+<div class="bg-cover bg-center w-full h-full filter saturate-150 brightness-75" data-alt="Abstract illuminated molecular bonding chemical organic network diagram phosphor cyan and amber nodes glowing in dark room defense data visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPxIiBdncBbLXI8auvy2zpc5RlwuTLQB7_2grE67EIhpqbWQQFQNYL2sT__qQkYcpWXHucyuNpUp77zUPIxR7ccDeDJYs3jxRTidrX2kYsZzETPXIw2JlIEyp-J8dEr3qHoh0zHb7oYkJ1k8bKeV6tq_H4xiwTBK63LWn1qtrxG8jdW2Bu--HRqkQ5llVlsUzPRkrio1TPDdOKEsT8Y03LHIxjGmGj1OXqJB8l2iilFa8oILqUbVPh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm uppercase">
+            TARGET // REACTION LAB
+          </div>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">ALDEHYDE CROSS-CONDENSATION</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Surgical attack on stereochemical intermediate traps and thermodynamic traps.</p>
+</div>
+<button class="mt-space-sm w-full py-1 bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase transition-all">
+          MAP MECHANISM
+        </button>
+</div>
+<!-- TILE 3: CALCULUS AREA VECTOR CONFINEMENT -->
+<div class="bg-surface-container-low p-space-sm flex flex-col justify-between">
+<div class="relative w-full h-32 mb-space-xs overflow-hidden">
+<div class="bg-cover bg-center w-full h-full filter saturate-150 brightness-75" data-alt="Cybernetic calculus graph 3D mathematical curve vector elevation wireframe model radar green grid on black aerospace terminal display" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcJ3REVEhGa3NyhHtT2Q-uTQtXO1Jffa_T0tji3JFyFouvkQT3HSpQpoThc9iJEv1EtnA6xPxdfZCLCSJHajXICABamIJ778Wh7tjgHgX0b4L3JNOnrYvlhYkh7C1eY7bvotvdVsrKrrcw99aLepKb2hTDGF3GatT_lUga-LWipTen2zGN3cYu-xMR7XUT4A-PdxLn_wyHC_MWA8TiWb2WJJN6TokS5F_WkGQgagOGPDzLSt3NAyhI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest text-primary-container font-label-sm text-label-sm uppercase">
+            VECTOR // BOUNDARY INTEGRAL
+          </div>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary uppercase font-bold">LEIBNITZ CRITICAL REGIONS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">High-speed differentiation under integral sign with variable bounds.</p>
+</div>
+<button class="mt-space-sm w-full py-1 bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm uppercase transition-all">
+          CALCULATE DRILL
+        </button>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE MODAL / QUICK COMBAT DRILL POPUP -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden items-center justify-center p-space-md" id="quickDrillModal">
+<div class="bg-surface-container-lowest w-full max-w-xl p-space-lg shadow-2xl relative flex flex-col">
+<!-- HEADER -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-xl animate-pulse">crisis_alert</span>
+<span class="font-title-sm text-title-sm text-primary uppercase">PRECISION AIR-STRIKE // 5-MCQ PROTOCOL</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors" id="closeDrillModal">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- ACTIVE SIMULATED QUESTION -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>TARGET 01 OF 05: ROTATIONAL RIGID BODY DYNAMICS</span>
+<span class="text-secondary font-mono">00:45 TIME REMAINING</span>
+</div>
+<div class="p-space-sm bg-surface-container-low text-primary font-body-md text-body-md leading-relaxed">
+          A uniform disc of mass <span class="text-primary-container font-bold">M</span> and radius <span class="text-primary-container font-bold">R</span> is projected with velocity <span class="text-primary-container font-bold">v₀</span> on a rough horizontal surface with zero initial angular speed. When pure rolling begins, what is the work done by friction on the disc?
+        </div>
+<!-- MCQ OPTIONS -->
+<div class="space-y-space-xs font-label-sm text-label-sm uppercase">
+<button class="w-full p-space-sm bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-left transition-colors flex items-center justify-between">
+<span>[A] - (1/6) M v₀²</span>
+<span class="text-outline">SELECT</span>
+</button>
+<button class="w-full p-space-sm bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-left transition-colors flex items-center justify-between">
+<span>[B] - (1/3) M v₀²</span>
+<span class="text-outline">SELECT</span>
+</button>
+<button class="w-full p-space-sm bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-left transition-colors flex items-center justify-between">
+<span>[C] - (1/2) M v₀²</span>
+<span class="text-outline">SELECT</span>
+</button>
+<button class="w-full p-space-sm bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-left transition-colors flex items-center justify-between">
+<span>[D] Zero (since point of contact is instantaneously at rest)</span>
+<span class="text-outline">SELECT</span>
+</button>
+</div>
+</div>
+<!-- MODAL FOOTER -->
+<div class="mt-space-lg flex items-center justify-between pt-space-sm">
+<span class="font-label-sm text-label-sm text-outline">ENCRYPTION: HARD-ENCRYPTED LOCAL</span>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-bright hover:text-on-surface transition-all" id="submitAnswerBtn">
+          CONFIRM TARGET VECTOR
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tactical micro-interactions and modal triggers
+  (function initStudySentinel() {
+    const btnSortie = document.getElementById('btnInitiateSortie');
+    const modal = document.getElementById('quickDrillModal');
+    const btnClose = document.getElementById('closeDrillModal');
+    const btnSubmit = document.getElementById('submitAnswerBtn');
+    const theatreTabs = document.querySelectorAll('#theatreTabs button');
+
+    if (btnSortie && modal) {
+      btnSortie.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    }
+
+    if (btnClose && modal) {
+      btnClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+    }
+
+    if (btnSubmit && modal) {
+      btnSubmit.addEventListener('click', () => {
+        btnSubmit.innerText = 'TARGET ACQUIRED // +4 XP';
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          btnSubmit.innerText = 'CONFIRM TARGET VECTOR';
+        }, 600);
+      });
+    }
+
+    // Toggle active state for Theatre Tabs
+    theatreTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        theatreTabs.forEach(t => {
+          t.className = 'px-space-md py-space-xs bg-surface-container text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs';
+          const dot = t.querySelector('span');
+          if (dot) dot.className = 'w-1.5 h-1.5 bg-outline rounded-full';
+        });
+        tab.className = 'px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase flex items-center gap-space-xs shadow-[0_0_10px_rgba(0,255,102,0.3)]';
+        const activeDot = tab.querySelector('span');
+        if (activeDot) activeDot.className = 'w-1.5 h-1.5 bg-on-primary-container rounded-full';
+      });
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest px-space-lg py-space-sm shadow-[0_-1px_6px_rgba(0,0,0,0.3)]"><div class="flex flex-col md:flex-row items-center justify-between gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">SECURE PROTOCOL: LOCALSTORAGE ENCRYPTED // ZERO CLOUD LEAK // AIR-GAPPED OFFLINE READY</span><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-primary-container">[ENCRYPTION: 256-BIT TACTICAL]</span><span class="font-label-sm text-label-sm text-outline">SENTINEL MIL-SPEC OS // V4.1.0</span></div></div></footer></div></body></html>

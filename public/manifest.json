@@ -1,0 +1,28 @@
+{
+  "name": "StudyStreak - AI Study Companion",
+  "short_name": "StudyStreak",
+  "description": "AI Study Companion for Competitive Exam Aspirants (JEE, NEET, UPSC, GATE, CAT, SSC, Banking)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101416",
+  "theme_color": "#00ff66",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
